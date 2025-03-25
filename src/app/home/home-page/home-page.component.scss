@@ -1,0 +1,91 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.title {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    margin-left: 2vw;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    color: white;
+    font-family: "Poiret One", cursive;
+    background-color: rgb(225, 152, 7);
+    background-image: radial-gradient(circle, rgba(226, 175, 87, 0.799), rgba(171, 121, 23, 0.799));
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    z-index: 20;
+}
+
+.background {
+    background-image: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 20%, var(--varStrip) 80%, var(--varStrip) 100%);
+}
+
+.img-container {
+    position: absolute;
+
+}
+
+.strip {
+    height: 40vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--varStrip);
+    border-radius: 0 0 0 100px;
+    background-image: url("../../../../public/img/strip.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.content {
+    border-radius: 0 100px 0 0;
+    z-index: 2;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container {
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.btn-container>a {
+    text-decoration: none;
+    color: rgb(225, 152, 7);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.btn-container>a:hover {
+    color: rgb(171, 121, 23);
+}
+
+
+#bronya {
+    position: relative;
+    left: 0vh;
+    top: 2vh;
+    width: 80vh;
+    height: 80vh;
+}
+
+#seele {
+    left: -25vh;
+    top: -28vh;
+    position: relative;
+    width: 25vh;
+    height: 100%;
+}
