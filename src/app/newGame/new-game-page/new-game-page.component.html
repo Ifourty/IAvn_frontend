@@ -1,1 +1,27 @@
-<p>new-game-page works!</p>
+<div class="menu">
+    @for(menu of menuTabs; track $index){
+    <p class="menu-button" [class.selected]="selectedMenuMode === menu.mode" (click)="selectedMenuMode = menu.mode">
+        {{menu.name}}
+    </p>
+    }
+</div>
+<div class="data-container">
+    @if(selectedMenuMode === "worldBuilding"){
+
+    }
+</div>
+<div class="chat-container">
+    <div class="phase-slider">
+        <p>Phase {{currentStep}}</p>
+        <mat-slider class="phase-slider" min="1" max="3" step="1" showTickMarks discrete [displayWith]="formatLabel">
+            <input matSliderThumb [(ngModel)]="currentStep">
+        </mat-slider>
+    </div>
+    <p-floatlabel variant="on" floatlabel.focus.color>
+        <input pInputText id="on_label" [(ngModel)]="prompt" autocomplete="off" class="" />
+        <label for="on_label">Prompt</label>
+    </p-floatlabel>
+    <button mat-icon-button class="icon-button" (click)="sendPrompt()">
+        <mat-icon>send</mat-icon>
+    </button>
+</div>

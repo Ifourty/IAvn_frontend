@@ -1,3 +1,17 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+html {
+    @include mat.theme((color: (theme-type: light,
+                primary: mat.$orange-palette,
+                tertiary: mat.$yellow-palette,
+            ),
+            typography: Roboto,
+            density: 0,
+        ));
+}
+
 /* You can add global styles to this file, and also import other style files */
 body {
     padding: 0;
@@ -6,4 +20,23 @@ body {
 
 :root {
     --varStrip: rgb(253, 241, 204);
+    --barColor: rgb(225, 152, 7);
+    color-scheme: "light";
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::ng-deep .mat-slider.mat-mdc-slider {
+    --mdc-slider-handle-color: yellow;
+    --mdc-slider-track-color: yellow;
+    --mdc-slider-focus-handle-color: yellow;
+    --mdc-slider-hover-handle-color: yellow;
 }
